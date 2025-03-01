@@ -12,7 +12,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-# Sets permissions of the GITHUB_TOKEN
 permissions:
   packages: write
   contents: read
