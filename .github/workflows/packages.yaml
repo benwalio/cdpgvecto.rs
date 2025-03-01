@@ -2,11 +2,11 @@ name: Build Image and Push
 
 on:
   push:
-    branches: [ 'main' ]
+    branches: ["main"]
   pull_request:
-    branches: [ 'main' ]
+    branches: ["main"]
   release:
-    types: [ published ]
+    types: [published]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -30,7 +30,7 @@ jobs:
           # renovate: datasource=docker depName=registry.developers.crunchydata.com/crunchydata/crunchy-postgres
           - "ubi8-15.8-0"
           # renovate: datasource=docker depName=registry.developers.crunchydata.com/crunchydata/crunchy-postgres
-          - "ubi8-16.4-0"
+          - "ubi8-16.6-2"
 
     runs-on: ubuntu-latest
     steps:
