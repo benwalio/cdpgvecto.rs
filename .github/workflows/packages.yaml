@@ -3,8 +3,12 @@ name: Build Image and Push
 on:
   push:
     branches: ["main"]
+    paths-ignore:
+      - .github/**
   pull_request:
     branches: ["main"]
+    paths-ignore:
+      - .github/**
   release:
     types: [published]
 
